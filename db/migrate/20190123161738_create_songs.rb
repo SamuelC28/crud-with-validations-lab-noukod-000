@@ -4,7 +4,7 @@ class CreateSongs < ActiveRecord::Migration
       t.string :title
       t.string :artist_name
       t.integer :release_year
-      t.boolean :relased
+      t.boolean :released
       t.string :genre
 
       t.timestamps null: false
