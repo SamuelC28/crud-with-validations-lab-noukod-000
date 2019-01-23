@@ -13,8 +13,7 @@ class Song < ActiveRecord::Base
       unless self.release_year
         errors.add(:release_year, "Released Song must have a released year.")
       else
-        now = Time.new
-        if now.year < self.release_year
+        if Time.new.year < self.release_year
           errors.add(:release_year, "Release year is in the future.")
         end
       end
